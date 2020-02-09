@@ -24,3 +24,7 @@ var balloonFly = function () {
 
 setTimeout('balloonFly()', 1000);
 setInterval('balloonFly()', 20000);
+
+balloon.addEventListener('click', function () {
+   balloonFly()
+});
