@@ -180,6 +180,14 @@ a {
   font-size: .4em;
   letter-spacing: .2em; }
 
+p.w3c {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: .4;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%); }
+
 .balloon {
   position: absolute;
   width: 7vw;

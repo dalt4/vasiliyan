@@ -172,6 +172,14 @@ a {
     letter-spacing: .2em;
 }
 
+p.w3c {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: .4;
+    filter: grayscale(100%);
+}
+
 .balloon {
     position: absolute;
     width: 7vw;
