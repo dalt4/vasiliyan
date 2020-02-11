@@ -16,17 +16,28 @@ langSwitch.addEventListener("click", function () {
 });
 
 var balloonFly = function () {
-      var coordinateX = getRandomInt(100);
-      var coordinateY = getRandomInt(100);
-      balloon.style.top = (coordinateY) + '%';
-      balloon.style.left = (coordinateX) + '%'
+    var coordinateX = getRandomInt(80);
+    var coordinateY = getRandomInt(80);
+    balloon.style.transition = '20s';
+    balloon.style.transform = 'scale(1)';
+    balloon.style.top = (coordinateY) + '%';
+    balloon.style.left = (coordinateX) + '%';
 };
 
 setTimeout('balloonFly()', 5000);
 setInterval('balloonFly()', 20000);
 
+var balloonCounter = 0;
+
 balloon.addEventListener('click', function () {
-    balloon.style.transform = 'scale(0)';
-   balloonFly();
-   setTimeout(() => balloon.style.transform = 'scale(1)', 2000)
+    if (balloonCounter === 2) {
+        balloon.style.transition = '.4s';
+        balloon.style.transform = 'scale(0)';
+        balloonCounter = 0;
+        setTimeout('balloonFly()', 5000);
+    } else {
+        balloonCounter++;
+        balloon.style.transition = '.4s';
+        balloonFly();
+    }
 });
