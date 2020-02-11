@@ -22,9 +22,11 @@ var balloonFly = function () {
       balloon.style.left = (coordinateX) + '%'
 };
 
-setTimeout('balloonFly()', 1000);
+setTimeout('balloonFly()', 5000);
 setInterval('balloonFly()', 20000);
 
 balloon.addEventListener('click', function () {
-   balloonFly()
+    balloon.style.transform = 'scale(0)';
+   balloonFly();
+   setTimeout(() => balloon.style.transform = 'scale(1)', 2000)
 });
