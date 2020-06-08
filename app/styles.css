@@ -15,7 +15,16 @@ html, body {
   height: 100%; }
 
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+
+.underDog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
 
 .wrapper {
   font-family: 'Times New Roman', sans-serif;
@@ -42,7 +51,8 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background: black; }
+  background: black;
+  z-index: 1; }
 
 .templateMonster {
   position: absolute;
@@ -56,6 +66,11 @@ body {
 
 .templateMonster.eng {
   background: url("img/Certified-partner-Banner.png") 0 0/100% no-repeat; }
+
+.templateMonster-link {
+  display: block;
+  width: 100%;
+  height: 100%; }
 
 .langSwitch {
   position: absolute;
